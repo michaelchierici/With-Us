@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  background-image: linear-gradient(to bottom right, #01ebe0, #1268b8, #355e85);
+
+  /*background-image: linear-gradient(to top right, #25c5e8, #2d87f5, #2433e0); */
+  /*background-image: linear-gradient(to bottom right, #34568b, #56c6a9, #798ea4); */
+
+  margin: 0 auto;
+  background-position: top;
+}
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 100px 120px;
+}
+
+.header {
+  grid-row: 1;
+  grid-column: 2;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  padding: 40px;
+  transform: translate(10%, 90%);
+}
+
+.header h1 {
+  margin: -40px;
+}
+
+.menu {
+  background-image: linear-gradient(to bottom, #00758f #798ea4);
+  grid-row: 2;
+  grid-column: 3;
+  padding: 80px 80px 40px;
+}
+.menu h1 {
+  display: inline-block;
+  margin: -15px;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  transform: translate(37%, -65%);
+  font-size-adjust: ease;
+}
+
+.button-bottom {
+  text-transform: uppercase;
+  padding: 5px 80px;
+  border-radius: 100px;
+  transform: translate(-10%, -80%);
+  font-family: "Poppins", sans-serif, bold;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  transition: all 1s;
+  margin: 55px -150px;
+
+  background-color: #01ebe0;
+  box-shadow: 1px 1px 15px black;
+}
+
+.button-bottom:hover {
+  opacity: 0.6;
+  transform: translate(-10%, -60%);
+  background-color: #64a0aa;
+}
+
+.content {
+  grid-row: 2;
+  grid-column: 2;
+  transform: translate(10%, 95%);
+  animation: imgMove 1.5s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.text1 {
+  display: flex;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  animation: imgMoveP 2s ease-in-out;
+  backface-visibility: hidden;
+  justify-content: space-around;
+  transform: translate(-26%, 10%);
+}
+
+.text2 {
+  display: flex;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  animation: imgMoveP 2s ease-in-out;
+  backface-visibility: hidden;
+  justify-content: space-around;
+  transform: translate(-12%, 10%);
+}
+
+@keyframes imgMove {
+  0% {
+    opacity: 0;
+
+    transform: translate(10%, -100%);
+  }
+  50% {
+    opacity: 0.1;
+
+    transform: translate(10%, -100%);
+  }
+}
+
+@keyframes imgMoveP {
+  0% {
+    opacity: 0.1;
+    transform: translate(-300%, 20%);
+    animation-delay: 2ms;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    opacity: 0.1;
+    animation-delay: 2ms;
+    transform: translate(-300%, 20%);
+    animation-timing-function: ease-out;
+  }
+}
+
+.people-img {
+  display: flex;
+  transform: translateY(-2%);
+  animation: peopleMove 1s ease-in-out;
+  border-radius: 2%;
+}
+
+.login-screen {
+  display: none;
+  background-image: linear-gradient(to top, #1c54e8, #19aafa);
+  height: 32rem;
+  width: 30rem;
+  grid-row: 3;
+  grid-column: 3;
+  animation: loginOn 1.5s ease-in;
+  transform: translate(72%, -2%);
+  border-radius: 10%;
+  box-shadow: 5px 5px 35px #2433e0;
+}
+
+@keyframes loginOn {
+  0% {
+    opacity: 0.1;
+    transition: all 2s;
+    transform: translate(70%, 100%);
+  }
+  50% {
+    opacity: 0.4;
+    transition: all 2s;
+    transform: translate(70%, 100%);
+  }
+}
+
+@keyframes peopleMove {
+  0% {
+    opacity: 0.1;
+    transition: all 1s;
+    transform: translate(55%);
+  }
+  50% {
+    opacity: 0.4;
+    transition: all 1s;
+    transform: translate(55%);
+  }
+}
+
+.mail {
+  display: inline-block;
+  width: 340px;
+  height: 50px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif solid;
+  font-size: 22px;
+  padding: 10px 10px;
+}
+
+.senha {
+  display: inline-block;
+  width: 340px;
+  height: 50px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif solid;
+  font-size: 22px;
+  padding: 10px 10px;
+}
+
+.date {
+    display: inline-block;
+    width: 340px;
+    height: 50px;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif solid;
+    font-size: 22px;
+    padding: 10px 10px;
+    margin: 18px;
+  }
+
+
+.entrar {
+  display: flex;
+  margin: 20px;
+  width: 200px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #04BFAD;
+  color: black;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif solid;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.movelogin {
+  display: flex;
+  margin: 30px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.fechar {
+  display: flex;
+  margin: 15px;
+  width: 200px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #8697A6;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  transition: all 1s;
+}
+
+.entrar:hover {
+  opacity: 0.6;
+
+  background-color: #64a0aa;
+  transform: translateY(20%);
+}
+
+.fechar:hover {
+  opacity: 0.6;
+
+  background-color: #64a0aa;
+  transform: translateY(20%);
+}
+
+.registro {
+  display: flex;
+  width: 200px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #049DD9;
+  color: black;
+  font-family: "Poppins", sans-serif bold;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  margin: 10px;
+  transition: all 1s;
+}
+
+.registro:hover {
+  opacity: 0.6;
+  transition: all 1s;
+  background-color: #64a0aa;
+  transform: translateY(20%);
+}
+
+.loginImg {
+  transform: translateY(-25%);
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+
+}
+
+.media img {
+  margin: 15px;
+}
+
+.media img:hover{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+
+/* #f0f1f2
+#6085a6
+#F28963
+#F25E5E
+#0396A6
+#8697A6
+#F2EADF
+#9BDAF2
+#04BFAD
+#56BF7B
+#03A688
+#BEBAD9
+#049DD9
+#04BFAD
